@@ -13,10 +13,9 @@
 chdir(dirname(__DIR__));
 require 'vendor/autoload.php';
 
-$config = require 'config.php';
-$serviceManagerConfig = new Zend\ServiceManager\Config($config['dependencies']);
-$container = new Zend\ServiceManager\ServiceManager($serviceManagerConfig);
-$container->setService('config', $config);
 
-$app = $container->get('Zend\Expressive\Application');
+/** @var \Interop\Container\ContainerInterface $container */
+$container = require 'config/container.php';
+/** @var \Zend\Expressive\Application $app */
+$app = $container->get(\Zend\Expressive\Application::class);
 $app->run();
