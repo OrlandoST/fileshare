@@ -1,7 +1,8 @@
-# php[architect] Zend Expressive Demo App
+# Simple File Sharing Application
 
-This repository is for looking at the demo code for a php[architect] article that I wrote, all put together and in
-a working state. 
+Простое приложение для быстрого обмена файлами
+Выкладываете файл на сервер и получаете ссылку, по которой любой человек может его скачать
+
 
 ## Using this code
 
